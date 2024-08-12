@@ -1,0 +1,7 @@
+1. Create a Docker composed Node server with redis inside of it to maintain server visit count (added complexity)
+
+2. Handle traffic situation (scaling)
+    Solution: run multiple instances of the container to handle traffic
+
+3. Handle redis explicitly for maintining visit count across all containers (for consistency)
+    Solution: create multiple instances of node container and 1 container of redis

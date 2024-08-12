@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  redis:
+    image: 'redis'
+  node-app:
+    # restart: always
+    # restart: on-failure
+    restart: 'no'
+    build: .
+    ports:
+      - "4001:4001"
+    depends_on:
+      - redis
